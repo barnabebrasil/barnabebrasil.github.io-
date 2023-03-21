@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gerador de URLs com parâmetros</title>
+  </head>
+  <body>
+    <h1>Gerador de URLs com parâmetros</h1>
+    <form>
+      <label for="url">Digite a URL original:</label>
+      <input type="text" id="url" name="url">
+      <br><br>
+      <button type="button" onclick="gerarURLs()">Gerar URLs</button>
+    </form>
+    <br>
+    <div id="resultados"></div>
+
+    <script>
+      function gerarURLs() {
+        var urlOriginal = document.getElementById("url").value;
+        var url67 = urlOriginal + "?utm=67";
+        var url68 = urlOriginal + "?utm=68";
+        var url69 = urlOriginal + "?utm=69";
+        var url70 = urlOriginal + "?utm=70";
+
+        document.getElementById("resultados").innerHTML =
+          "<p><a href='" + url67 + "'>" + url67 + "</a></p>" +
+          "<p><a href='" + url68 + "'>" + url68 + "</a></p>" +
+          "<p><a href='" + url69 + "'>" + url69 + "</a></p>" +
+          "<p><a href='" + url70 + "'>" + url70 + "</a></p>";
+      }
+    </script>
+  </body>
+</html>
